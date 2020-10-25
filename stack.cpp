@@ -54,7 +54,7 @@ void Stack::destroy(){
 
 //Expand function
 void Stack::expand(){
-	capacity += 1;
+	capacity *= GROWTH;
 	Block ** temp = new Block*[capacity];
 	for(int i = 0; i < top; i++){
 		temp[i] = stack[i];

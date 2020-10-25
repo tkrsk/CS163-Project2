@@ -84,7 +84,11 @@ void Manager::dequeue(){
 
 //Stack function to pop top of stack and append info to file
 void Manager::pop(){
-	promos->pop();
+	bool popped = promos->pop();
+	if(popped == true) cout << "Email sent!" << endl;
+	else{
+		cout << "No emails pending!" << endl;
+	}
 }
 
 

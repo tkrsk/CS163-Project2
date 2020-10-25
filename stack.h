@@ -52,6 +52,7 @@ private:
 	int capacity,
 		top;
 	const static int init_size = 3;
+	const static int GROWTH = 2;
 	
 	Block** stack;
 

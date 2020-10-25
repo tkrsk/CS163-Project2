@@ -30,8 +30,6 @@ public:
 	
 	char* get_email();
 
-//	Customer* get_cust();
-
 //Mutator
 	void set_next(Node* parm);
 
@@ -45,6 +43,6 @@ private:
 	Customer customer;
 	Node* next;
 
-	//My go-to cstring building function
+//My go-to cstring building function
 	char* strbuild(); 
 };

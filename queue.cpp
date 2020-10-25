@@ -42,7 +42,7 @@ Node* Queue::get_head(){
 
 
 
-//Enqueue
+//Public Enqueue
 void Queue::enqueue(){
 	Node* add = new Node; //New group of customers
 
@@ -53,6 +53,7 @@ void Queue::enqueue(){
 
 
 
+//Private Enqueue
 void Queue::enqueue(Node* parm){
 	if(head == nullptr){
 		head = parm;
@@ -97,7 +98,7 @@ void Queue::dequeue(){
 
 bool Queue::dequeue(Node* parm){
 	if(head->get_next() != nullptr){
-		Node* curr = head->get_next();
+		Node* curr = head->get_next(); //Placeholder node
 
 		delete parm;
 	

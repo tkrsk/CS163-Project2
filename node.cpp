@@ -17,10 +17,6 @@ Node::Node(){
 
 //Desturctor
 Node::~Node(){
-/*	if(customer != nullptr){	
-		delete customer;
-		customer = nullptr;
-	}*/
 	next = nullptr;
 }
 
@@ -48,12 +44,6 @@ char* Node::get_name(){
 char* Node::get_email(){
 	return customer.get_email();
 }
-
-
-
-//Customer* Node::get_cust(){
-//	return *customer;
-//}
 
 
 
