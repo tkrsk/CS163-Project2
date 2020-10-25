@@ -17,7 +17,10 @@ Node::Node(){
 
 //Desturctor
 Node::~Node(){
-	delete customer;
+/*	if(customer != nullptr){	
+		delete customer;
+		customer = nullptr;
+	}*/
 	next = nullptr;
 }
 
@@ -31,26 +34,26 @@ Node* Node::get_next(){
 
 
 bool Node::signup(){
-	return customer->is_signing();
+	return customer.is_signing();
 }
 
 
 
 char* Node::get_name(){
-	return customer->get_customer();
+	return customer.get_customer();
 }
 
 
 
 char* Node::get_email(){
-	return customer->get_email();
+	return customer.get_email();
 }
 
 
 
-Customer* Node::get_cust(){
-	return customer;
-}
+//Customer* Node::get_cust(){
+//	return *customer;
+//}
 
 
 
@@ -63,10 +66,11 @@ void Node::set_next(Node* parm){
 
 //New customer creation function
 void Node::add_customer(){
-	customer = new Customer;
+	//customer = new Customer;
 	cout << "Please enter a name for the group:" << endl;
 	char* name = strbuild(); //Name for group of customers
-	customer->set_name(name);
+	customer.set_name(name);
+	delete [] name;
 
 	int size = 0; //Int for party size
 	cout << "How many will be in your party?" << endl;
@@ -79,7 +83,7 @@ void Node::add_customer(){
 		cout << "How many will be in your party?" << endl;
 		cin >> size;
 	}
-	customer->set_size(size);
+	customer.set_size(size);
 
 	bool special = false; //Check if party requires special seating
 	int answer = 0; //Answer int
@@ -101,13 +105,13 @@ void Node::add_customer(){
 		cout << "Please tell me what kind of special seating your party requires:" << endl;
 		char* seating = strbuild(); //Special seating type
 		
-		customer->set_seat(seating);
+		customer.set_seat(seating);
 
 		delete [] seating;
 
 		special = true;	
 	}
-	customer->set_spec(special);
+	customer.set_spec(special);
 	
 	bool signup = false;
 	answer = 0;
@@ -128,24 +132,24 @@ void Node::add_customer(){
 	if(answer == 1){
 		cout << "Please enter your name:" << endl;
 		char* cust = strbuild();
-		customer->set_cust(cust);
+		customer.set_cust(cust);
 
 		cout << "Please enter the email we can reach you at for future promotions:" << endl;
 		char* email = strbuild();
-		customer->set_email(email);
+		customer.set_email(email);
 		
 		delete [] cust;
 		delete [] email;
 
 		signup = true;
 	}
-	customer->set_signup(signup);
+	customer.set_signup(signup);
 }
 
 
 
 void Node::print(){
-	customer->get_info();
+	customer.get_info();
 }
 
 

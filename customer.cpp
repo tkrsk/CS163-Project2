@@ -24,6 +24,9 @@ Customer::Customer(){
 //Destructor
 Customer::~Customer(){
 	if(group_name != nullptr){
+		if(group_name[0] != '\0'){
+	  		for(int idx = 0; group_name[(idx) + 1] != '\0'; idx++) group_name[idx] = '\0';
+		}	
 		delete [] group_name;
 		group_name = nullptr;
 	}
@@ -31,16 +34,25 @@ Customer::~Customer(){
 	group_size = 0;
 
 	if(seat_type != nullptr){
+		if(seat_type[0] != '\0'){
+	  		for(int idx = 0; seat_type[(idx) + 1] != '\0'; idx++) seat_type[idx] = '\0';
+		}	
 		delete [] seat_type;
 		seat_type = nullptr;
 	}
 
 	if(cust_name != nullptr){
+		if(cust_name[0] != '\0'){
+	  		for(int idx = 0; cust_name[(idx) + 1] != '\0'; idx++) cust_name[idx] = '\0';
+		}	
 		delete [] cust_name;
 		cust_name = nullptr;
 	}
 
 	if(cust_email != nullptr){
+		if(cust_email[0] != '\0'){
+	  		for(int idx = 0; cust_email[(idx) + 1] != '\0'; idx++) cust_email[idx] = '\0';
+		}	
 		delete [] cust_email;
 		cust_email = nullptr;
 	}
@@ -93,7 +105,7 @@ char* Customer::get_email(){
 
 //Mutators
 void Customer::set_name(char* name){
-	group_name = new char[strlen(name + 1)];
+	group_name = new char[strlen(name) + 1];
 	strcpy(group_name, name);
 }
 
@@ -112,7 +124,7 @@ void Customer::set_spec(bool special){
 
 
 void Customer::set_seat(char* seat){
-	seat_type = new char[strlen(seat + 1)];
+	seat_type = new char[strlen(seat) + 1];
 	strcpy(seat_type, seat);
 }
 
@@ -125,14 +137,14 @@ void Customer::set_signup(bool signup){
 
 
 void Customer::set_cust(char* cust){
-	cust_name = new char[strlen(cust + 1)];
+	cust_name = new char[strlen(cust) + 1];
 	strcpy(cust_name, cust);
 }
 
 
 
 void Customer::set_email(char* email){
-	cust_email = new char[strlen(email + 1)];
+	cust_email = new char[strlen(email) + 1];
 	strcpy(cust_email, email);
 }
 

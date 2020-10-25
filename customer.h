@@ -14,7 +14,6 @@ class Customer{
 public:
 //Constructor
 	Customer();
-	Customer(char* name, int size, bool special, bool signup);
 
 //Destructor
 	~Customer();

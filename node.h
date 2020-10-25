@@ -30,7 +30,7 @@ public:
 	
 	char* get_email();
 
-	Customer* get_cust();
+//	Customer* get_cust();
 
 //Mutator
 	void set_next(Node* parm);
@@ -42,7 +42,7 @@ public:
 	void print();
 
 private:
-	Customer* customer;
+	Customer customer;
 	Node* next;
 
 	//My go-to cstring building function

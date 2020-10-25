@@ -65,8 +65,8 @@ void Manager::dequeue(){
 		strcpy(name, temp->get_customer());
 		strcpy(email, temp->get_email());
 */
-		char* name = new char[strlen(waitlist->get_name())];
-		char* email = new char[strlen(waitlist->get_email())];
+		char* name = new char[strlen(waitlist->get_name()) + 1];
+		char* email = new char[strlen(waitlist->get_email()) + 1];
 
 		strcpy(name, waitlist->get_name());
 		strcpy(email, waitlist->get_email());

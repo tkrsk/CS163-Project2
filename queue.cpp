@@ -108,7 +108,9 @@ bool Queue::dequeue(Node* parm){
 		if(tail == head) tail = nullptr;
 	}		
 	else{
-		delete parm;
+		delete head;
+
+		head = nullptr;
 	}
 		line--;
 		
@@ -128,7 +130,10 @@ void Queue::peek(){
 
 //Display
 void Queue::display(){
-	display(head);
+	if(head != nullptr) display(head);
+	else{
+		cout << "No one is currently waiting!" << endl;
+	}
 }
 
 
