@@ -54,9 +54,35 @@ void Node::set_next(Node* parm){
 
 
 
+void Node::set_group(char* group){
+	customer.set_name(group);
+}
+
+
+
+void Node::set_size(int size){
+	customer.set_size(size);
+}
+
+
+
+void Node::set_seat(char* seat){
+	customer.set_spec(true);
+	customer.set_seat(seat);
+}
+
+
+
+void Node::set_signup(char* name, char* email){
+	customer.set_signup(true);
+	customer.set_cust(name);
+	customer.set_email(email);
+}
+
+
+
 //New customer creation function
 void Node::add_customer(){
-	//customer = new Customer;
 	cout << "Please enter a name for the group:" << endl;
 	char* name = strbuild(); //Name for group of customers
 	customer.set_name(name);

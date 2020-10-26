@@ -33,6 +33,14 @@ public:
 //Mutator
 	void set_next(Node* parm);
 
+	void set_group(char* group);
+
+	void set_size(int size);
+
+	void set_seat(char* seat);
+
+	void set_signup(char* name, char* email);
+
 //Customer Info Initialization
 	void add_customer();
 

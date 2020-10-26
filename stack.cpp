@@ -114,7 +114,7 @@ void Stack::display(){
 	if(is_empty() == false){
 		cout << "Customers not yet emailed: " << capacity << endl;
 		for(int i = 0; i < top; i++){
-			cout << "-" << i + 1 << "-" << endl;
+			cout << "\n-" << i + 1 << "-" << endl;
 			cout << "Name: " << stack[i]->get_name() << endl;
 			cout << "Email: " << stack[i]->get_email() << endl;
 			cout << "---\n" << endl;

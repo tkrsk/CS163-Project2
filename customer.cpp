@@ -174,6 +174,4 @@ void Customer::get_info(){
 		cout << "Name: " << cust_name << endl;
 		cout << "Email: " << cust_email << endl;
 	}
-
-	cout << "---" << endl;
 }

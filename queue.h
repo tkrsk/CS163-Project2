@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <cstring>
+#include <fstream>
 
 #include "node.h"
 
@@ -28,6 +29,9 @@ public:
 
 //Peek
 	void peek();
+
+//Public data init
+	void waitlist_init();
 
 //Public enqueue function
 	void enqueue();
@@ -50,12 +54,18 @@ private:
 	Node* tail;
 	int line;
 
-//Enqueue
+//Private data init
+	void waitlist_init(char* file);
+
+//Private Enqueue
 	void enqueue(Node* parm);
 
-//Dequeue
+//Private Dequeue
 	bool dequeue(Node* parm);
 
 //Display
 	void display(Node* parm);
+
+//String builder helper function
+	char* strhelper(ifstream& ifile);
 };

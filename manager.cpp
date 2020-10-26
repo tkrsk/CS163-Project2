@@ -32,6 +32,77 @@ Manager::~Manager(){
 
 
 
+//User interface function to clean clutter from app module
+void Manager::start(){
+	data_init();
+
+	int command;
+
+	cout << "(0) To Exit\n(1) Show next group.\n(2) Show all groups waiting\n(3) Add new group to waitlist\n(4) Seat next group" << endl;
+	cout << "(5) Show most recent customer to sign up\n(6) Show all customers who have not received an email yet\n(7) Send email to most recent customer to sign up" << endl;
+	cout << "What would you like to do?" << endl;
+	cin >> command;
+	while (!cin.good()){ //Checks for valid integer input
+    	cin.clear();
+	    cin.ignore();
+		cout << "Please enter a valid number!" << endl;
+		cin >> command;
+	}
+	cin.ignore();
+
+	while(command > 0 && command <= 6){
+		while (!cin.good()){ //Checks for valid integer input
+    		cin.clear();
+	    	cin.ignore();
+			cout << "Please enter a valid number!" << endl;
+			cin >> command;
+		}
+		if(command == 1){
+			peek();
+		}
+
+		else if(command == 2){
+			waiting();
+		}
+
+		else if(command == 3){
+			enqueue();
+		}
+
+		else if(command == 4){
+			dequeue();
+		}
+
+		else if(command == 5){
+			speek();
+		}
+		
+		else if(command == 6){
+			check();
+		}
+
+		else if(command == 7){
+			pop();
+		}
+
+		cout << "(1) Show next group.\n(2) Show all groups waiting\n(3) Add new group to waitlist\n(4) Seat next group" << endl;
+		cout << "(5) Show most recent customer to sign up\n(6) Show all customers who have not received an email yet\n(7) Send email to most recent customer to sign up" << endl;
+		cout << "What would you like to do?" << endl;
+		cin >> command;
+		cin.ignore();
+	}
+	cout << "Good Bye!" << endl;
+}
+
+
+
+//Queue data init function
+void Manager::data_init(){
+	waitlist->waitlist_init();
+}
+
+
+
 //Queue function to add to waitlist
 void Manager::enqueue(){
 	waitlist->enqueue();
@@ -56,15 +127,12 @@ void Manager::waiting(){
 
 //Queue and stack function to dequeue from queue and push to stack if customer wants to sign up for promos
 void Manager::dequeue(){
-	if(waitlist->signup() == true){
-		/*Customer* temp = waitlist->get_head()->get_cust();
-
-		char* name = new char[strlen(temp->get_customer()) + 1];
-		char* email = new char[strlen(temp->get_email()) + 1];
-
-		strcpy(name, temp->get_customer());
-		strcpy(email, temp->get_email());
-*/
+	if(waitlist->get_head() == nullptr){
+		cout << "There are no customers waiting to be seated!" << endl;
+		return;
+	}
+	else if(waitlist->signup() == true){
+		
 		char* name = new char[strlen(waitlist->get_name()) + 1];
 		char* email = new char[strlen(waitlist->get_email()) + 1];
 
@@ -76,6 +144,7 @@ void Manager::dequeue(){
 		delete [] name;
 		delete [] email;
 	}
+	cout << "Seating next group!" << endl;
 
 	waitlist->dequeue();
 }

@@ -25,7 +25,11 @@ public:
 //Destructor
 	~Manager();
 
+//UI function
+	void start();
+
 //Queue Managing functions
+	void data_init(); //Reads in data file to queue
 	void enqueue(); //Allows user the add to queue
 	void dequeue(); //This function will dequeue and push to stack
 	void peek(); //Function to show next in line
