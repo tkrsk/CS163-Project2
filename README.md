@@ -5,10 +5,10 @@ Data file is ended by a tilde(~).<br>
 <br>
 Example is as follows:<br>
 GROUP NAME;<br>
-# OF PEOPLE IN GROUP<br>
-# 1 for yes, if special seat is required<br>
+NUM OF PEOPLE IN GROUP<br>
+Y/N 1 for yes, if special seat is required<br>
 SEAT TYPE;  If previous is 1, then this will be type of special seat<br>
-# 1 for yes, if they would like to sign up for promotions<br>
+Y/N 1 for yes, if they would like to sign up for promotions<br>
 NAME;  If previous is 1, then this will be name for sign up<br>
 EMAIL;  Email for sign up. <br>
 <br>
