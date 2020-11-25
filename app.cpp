@@ -1,10 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//cpp file for main program
-//app.cpp
-
 #include "app.h"
 
 using namespace std;

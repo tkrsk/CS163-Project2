@@ -1,10 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//Header file for stack adt
-//stack.h
-
 #pragma once
 
 #include <iostream>

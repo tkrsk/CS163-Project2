@@ -1,10 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//cpp file for stack's blocks
-//block.cpp
-
 #include "block.h"
 
 using namespace std;

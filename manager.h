@@ -1,10 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//Header file for queue and stack functions for app
-//manager.h
-
 #include <iostream>
 #include <cstring>
 #include <fstream>

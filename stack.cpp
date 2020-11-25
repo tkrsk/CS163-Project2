@@ -1,9 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//cpp file for stack adt
-//stack.cpp
 #include "stack.h"
 
 using namespace std;

@@ -1,10 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//cpp file for queue and stack managing functions for app
-//manager.cpp
-
 #include "manager.h"
 
 using namespace std;

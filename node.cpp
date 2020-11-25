@@ -1,9 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//cpp file for queue's linkedlist nodes
-//node.cpp
 #include "node.h"
 
 using namespace std;

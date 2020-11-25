@@ -1,9 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//Header file for customer class
-//customer.h
 #pragma once
 
 #include <iostream>

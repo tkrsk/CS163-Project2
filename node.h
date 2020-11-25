@@ -1,9 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//Header file for queue's linkedlist nodes
-//node.h
 #pragma once
 
 #include <iostream>

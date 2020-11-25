@@ -1,9 +1,3 @@
-//Taka Masagatani
-//CS260
-//Fall 2020
-//Project 2
-//cpp file for queue adt
-//queue.cpp
 #include "queue.h" 
 
 using namespace std;
